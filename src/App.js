@@ -1,10 +1,12 @@
-import Hero from "./components/Hero";
 import './App.css'
+import {Article, Hero, Navbar} from './components';
 
 function App() {
   return (
-    <div className="App flex bg-slate-300">
+    <div className="App">
+      <Navbar/>
       <Hero/>
+      <Article/>
     </div>
   );
 }
