@@ -3,6 +3,8 @@
     position: relative;
     background-image: url('../../img/hero1.png');
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 60dvh;
 }
 .hero-component::before {
