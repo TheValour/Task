@@ -1,0 +1,23 @@
+@media screen and (max-width: 700px) {
+    .option-hide {
+        display: none;
+    }
+}
+@media screen and (max-width: 500px) {
+    #btn-join {
+        display: none;
+    }
+}
+@media screen and (max-width: 840px) {
+    #post-section {
+        width: 90%;
+        margin: 0;
+    } 
+    #side-section {
+        display: none;
+    }
+    #filter-section{
+        margin-left: 8vw;
+        margin-right: 8vw;
+    }
+}

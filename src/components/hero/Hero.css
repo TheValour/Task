@@ -21,3 +21,13 @@
     top: 70%;
     left: 20%;
 }
+#join-btn {
+    position: relative;
+    left: 70%;
+}
+
+@media screen and (min-width: 500px) {
+    #join-btn {
+        display: none;
+    }
+}

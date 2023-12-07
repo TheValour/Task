@@ -10,6 +10,9 @@ const Hero = () => {
         </h2>
         <span>142,765 Computer Engineers follow this</span>
       </div>
+      <button id='join-btn' className='border border-white p-2'>
+        Join Group
+      </button>
     </div>
   );
 };

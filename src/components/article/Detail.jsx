@@ -16,7 +16,7 @@ export default function Detail({data}) {
             }
 
             {data.link ? 
-                <button className='border p-1 bg-green-400 w-full'>{data.link.title}</button>
+                <button className='border-2 p-1 border-green-500 rounded-1 text-green-500 w-full'>{data.link.title}</button>
                 :<span className='text-gray-600'>I've worked in UX for the better part of a decade. From now on, I plan to rei…</span>
             }
 

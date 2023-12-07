@@ -9,7 +9,7 @@ function Navbar() {
 
       <input type="text" name="" id="" className='bg-gray-200 w-3/12 rounded-xl placeholder:text-xs ' placeholder='   Search for your favorite groups in ATG'/>
 
-      <div>Create account. <span className='text-blue-700'>It's  free</span></div>
+      <div>Create account. <span className='text-blue-700' id='its-free'>It's  free</span></div>
     </a>
   )
 }
