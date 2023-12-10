@@ -1,0 +1,72 @@
+#main-login-container {
+    overflow: hidden;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#main-login-container > img {
+    width: 20vw;
+    height: 60vh;
+    border-radius: 6px 0 0 6px;
+}
+
+#login-container{
+    background-color: rgb(219, 202, 202);
+    flex-direction: column;
+    width: 30vw;
+    height: 60vh;
+    border-radius: 0 6px 6px 0;
+}
+#login-container > *{
+    border-radius: 5px;
+    margin: 2.5vh;
+}
+#login-container > input {
+    border-width: 0 0 1px 0;
+    border-radius: 5px;
+    border-color: black;
+    width: 20vw;
+    height: 3.5vh;
+}
+#login-container > #error {
+    color: #c25a5a;
+}
+#login-container > button {
+    width: 20vw;
+    height: 5vh;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(29 65 125)    ;
+}
+#login-container > button:hover {
+    background-color: rgb(31, 78, 159);
+}
+#login-container > h5 {
+    font-weight: 100;
+}
+#login-container > label{
+    display: flex;
+    align-items: center;
+}
+#login-container > label > img{
+    width: 5vh;
+    height: 5vh;
+    cursor: pointer;
+}
+
+@media (max-width: 950px) {
+    #main-login-container > img {
+        display: none;
+    }
+
+    #login-container {
+        box-sizing: border-box;
+        width: 60vw;
+        padding: 1% 6% 1% 6%;
+        border-radius: 12px;
+    }
+
+    #login-container > input {
+        width: 100%;
+    }
+}

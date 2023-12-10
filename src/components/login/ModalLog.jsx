@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import Login from './Login';
 
-import Login from '../login/Login';
-import './Navbar.css';
+const ExampleApp = () => {
 
-function Navbar() {
   const [showModal, setShowModal] = useState(false);
-  
   const customStyles = {
     overlay: {
       position: 'fixed',
@@ -29,28 +27,23 @@ function Navbar() {
   const handleOpenModal = () => {
     setShowModal(true);
   };
+
   const handleCloseModal = () => {
     setShowModal(false);
   };
 
   return (
-    <div href="/" className="navbar-container my-4">
-      <span className='Romi'><img src="./img/logo.png" alt="ATG. WORLD" /></span>
-
-      <input type="text" name="" id="" className='bg-gray-200 w-3/12 rounded-xl placeholder:text-xs ' placeholder=' Search for your favorite groups in ATG'/>
-
-      <div>Create account. <span className='text-blue-700' id='its-free' onClick={handleOpenModal}>It's  free</span></div>
-
+    <div >
+      <button onClick={handleOpenModal}>Trigger Modal</button>
       <Modal
         isOpen={showModal}
         style={customStyles}
       >
+      <button onClick={handleCloseModal} >Close Modal</button>
         <Login/>
-        <button onClick={handleCloseModal}>Close Modal</button>
       </Modal>
-
     </div>
-  )
-}
+  );
+};
 
-export default Navbar;
+export default ExampleApp;

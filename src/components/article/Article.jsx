@@ -18,7 +18,6 @@ export default function Article() {
                 <span className='mr-3 option-hide'>Events</span>
             </div>
                 
-
             <div>
                 <button className='bg-gray-200 p-1 text-sm mr-3'>Write a Post</button>
                 <button id='btn-join' className='bg-blue-400 text-white p-1 text-sm'>Join Group</button>

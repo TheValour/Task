@@ -21,6 +21,10 @@
     justify-content: space-evenly;
   }
   
+#its-free {
+  cursor: pointer;
+}
+
   .navbar-menu li {
     margin-right: 15px;
   }
