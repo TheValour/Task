@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import Login from './Login';
+import Login from '../login/Login';
 
 const ExampleApp = () => {
 
@@ -39,7 +39,7 @@ const ExampleApp = () => {
         isOpen={showModal}
         style={customStyles}
       >
-      <button onClick={handleCloseModal} >Close Modal</button>
+      <button onClick={handleCloseModal} >Close</button>
         <Login/>
       </Modal>
     </div>

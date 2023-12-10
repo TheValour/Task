@@ -1,11 +1,15 @@
 import './App.css'
 import {Article, Hero, Navbar} from './components';
+import { UserContextProvider } from './components/context/UserContext'
 
 function App() {
 
   return (
     <div className="App">
-      <Navbar/>
+      <UserContextProvider>
+        <Navbar/>
+      </UserContextProvider>
+
       <Hero/>
       <Article/>
     </div>

@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 
-import Login from '../login/Login';
+import {Register, Login} from '../';
 import './Navbar.css';
+import { useSharedState } from '../context/UserContext';  // context
 
 function Navbar() {
+  const { currPage} = useSharedState();
+
   const [showModal, setShowModal] = useState(false);
-  
   const customStyles = {
     overlay: {
       position: 'fixed',
@@ -45,8 +47,8 @@ function Navbar() {
         isOpen={showModal}
         style={customStyles}
       >
-        <Login/>
-        <button onClick={handleCloseModal}>Close Modal</button>
+        <button onClick={handleCloseModal} className='bg-red-200 p-1 rounded-md text-sm'>Close</button>
+        {currPage ? <Login/> : <Register/>}
       </Modal>
 
     </div>

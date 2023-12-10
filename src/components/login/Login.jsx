@@ -1,8 +1,9 @@
 import React from 'react'
-// import './Login.css'
+import { useSharedState } from '../context/UserContext';  // context
 
 export default function Login() {
-  
+  const { setCurrPageHandler} = useSharedState();
+
   const submitHandler =  async (e) =>{
     e.preventDefault();
     const email = e.target[0].value;
@@ -12,28 +13,14 @@ export default function Login() {
 
   return (
       <div className='w-full'>
-        <form id='login-container' className='w-11/12 flex flex-col items-center justify-center' onSubmit={submitHandler}>
+        <form id='login-container' className='flex flex-col items-center justify-center' onSubmit={submitHandler}>
             <h2>We Chat</h2>
-            <h4>Login</h4>
-            <input type="email" placeholder=' email' required/>
-            <input type="password"  placeholder=' password' required/>
-            <button className='bg-blue-200'>Sign In</button>
-            <h5>You don't have account? <b><a href='/register'>Register</a></b></h5>
+            <h4 className='font-bold'>Login</h4>
+            <input type="email" placeholder=' email' required className='m-2 bg-gray-100'/>
+            <input type="password"  placeholder=' password' required className='m-2 bg-gray-100'/>
+            <button className='bg-blue-400 p-2 text-white m-2 rounded-md'>Login </button>
+            <h5>You don't have account? <b className='cursor-pointer' onClick={setCurrPageHandler}>Register</b></h5>
         </form>
       </div>
     )
   }
-
-
-
-  // <div id='main-login-container' className='flex text-gray-800 w-full h-full'>
-  //     <img src='./img/sideImg.jpg' alt="" />
-  //     <form id='login-container' className='flex' onSubmit={submitHandler}>
-  //         <h2>We Chat</h2>
-  //         <h4>Login</h4>
-  //         <input type="email" placeholder=' email' required/>
-  //         <input type="password"  placeholder=' password' required/>
-  //         <button>Sign In</button>
-  //         <h5>You don't have account? <b><a to='/register'>Register</a></b></h5>
-  //     </form>
-  // </div>
